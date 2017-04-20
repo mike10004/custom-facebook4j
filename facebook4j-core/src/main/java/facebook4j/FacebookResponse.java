@@ -16,6 +16,8 @@
 
 package facebook4j;
 
+import facebook4j.internal.org.json.JSONObject;
+
 import java.net.URL;
 import java.util.List;
 
@@ -29,7 +31,13 @@ public interface FacebookResponse {
      * @return introspection of the object
      */
     Metadata getMetadata();
-    
+
+    /**
+     * Returns the JSON object used to construct this object.
+     * @return the JSON object
+     */
+    JSONObject getJSON();
+
     /**
      * An interface represents introspection of objects.
      * @author Ryuji Yamashita - roundrop at gmail.com

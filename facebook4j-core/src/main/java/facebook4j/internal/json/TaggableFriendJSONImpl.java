@@ -31,7 +31,7 @@ final class TaggableFriendJSONImpl extends FacebookResponseImpl implements Tagga
     }
 
     /* package */TaggableFriendJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 

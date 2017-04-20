@@ -56,7 +56,7 @@ public class TaggedJSONImpl extends FacebookResponseImpl implements Tagged, java
     }
 
     /*package*/TaggedJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 

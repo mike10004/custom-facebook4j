@@ -102,7 +102,7 @@ final class PostJSONImpl extends FacebookResponseImpl implements Post, java.io.S
     }
 
     /*package*/PostJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 
