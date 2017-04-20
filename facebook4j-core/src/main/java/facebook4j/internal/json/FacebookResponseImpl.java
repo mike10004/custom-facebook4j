@@ -31,10 +31,14 @@ import facebook4j.internal.org.json.JSONObject;
     private static final long serialVersionUID = 4709046756028485684L;
     
     private Metadata metadata;
+    private transient final JSONObject json;
 
-    public FacebookResponseImpl() {}
+    public FacebookResponseImpl(JSONObject json) {
+        this.json = json;
+    }
     
     public FacebookResponseImpl(HttpResponse res) throws FacebookException {
+        this(res == null ? (JSONObject) null : res.asJSONObject());
         if (res == null) return;
         JSONObject json = res.asJSONObject();
         if (!json.isNull("metadata")) {
@@ -48,6 +52,10 @@ import facebook4j.internal.org.json.JSONObject;
 
     public Metadata getMetadata() {
         return metadata;
+    }
+
+    public JSONObject getJSON() {
+        return json;
     }
 
 }

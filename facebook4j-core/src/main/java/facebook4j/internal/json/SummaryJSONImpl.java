@@ -33,7 +33,7 @@ public class SummaryJSONImpl extends FacebookResponseImpl implements Summary, ja
     private Integer totalCount;
 
     /*package*/SummaryJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         if (json.isNull("order")) {
             order = null;
         } else {

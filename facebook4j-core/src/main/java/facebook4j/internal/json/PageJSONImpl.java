@@ -73,7 +73,7 @@ import static facebook4j.internal.util.z_F4JInternalParseUtil.*;
     }
 
     /*package*/PageJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 

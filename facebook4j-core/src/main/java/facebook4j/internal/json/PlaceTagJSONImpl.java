@@ -35,7 +35,7 @@ public class PlaceTagJSONImpl extends FacebookResponseImpl implements PlaceTag, 
     }
 
     /*package*/PlaceTagJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 

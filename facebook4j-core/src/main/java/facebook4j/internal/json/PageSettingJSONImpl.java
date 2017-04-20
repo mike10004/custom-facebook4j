@@ -48,7 +48,7 @@ public class PageSettingJSONImpl extends FacebookResponseImpl implements PageSet
     }
 
     /*package*/PageSettingJSONImpl(JSONObject json) throws FacebookException {
-        super();
+        super(json);
         init(json);
     }
 
